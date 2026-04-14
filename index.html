@@ -1,0 +1,36 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Registration Clone</title>
+    <style>
+        body { font-family: Helvetica, Arial, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1); width: 400px; text-align: center; }
+        h2 { margin-bottom: 5px; font-size: 24px; font-weight: bold; }
+        p { color: #606770; font-size: 15px; margin-bottom: 20px; }
+        hr { border: 0; border-top: 1px solid #dddfe2; margin: 15px 0; }
+        input { width: 100%; padding: 11px; margin: 5px 0; border: 1px solid #dddfe2; border-radius: 6px; box-sizing: border-box; background-color: #f5f6f7; font-size: 15px; }
+        .row { display: flex; gap: 10px; }
+        .btn { background-color: #00a400; color: white; border: none; padding: 10px 50px; font-size: 18px; font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 15px; }
+        .btn:hover { background-color: #008a00; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create a new account</h2>
+        <p>It's quick and easy.</p>
+        <hr>
+        <form>
+            <div class="row">
+                <input type="text" placeholder="First name" required>
+                <input type="text" placeholder="Surname" required>
+            </div>
+            <input type="text" placeholder="Mobile number or email address" required>
+            <input type="password" placeholder="New password" required>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
