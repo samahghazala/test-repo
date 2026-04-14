@@ -1,36 +1,142 @@
-html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Registration Clone</title>
+    <title>Sign Up for Facebook | Facebook</title>
     <style>
-        body { font-family: Helvetica, Arial, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1); width: 400px; text-align: center; }
-        h2 { margin-bottom: 5px; font-size: 24px; font-weight: bold; }
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 432px;
+        }
+        h2 { margin-bottom: 5px; font-size: 32px; }
         p { color: #606770; font-size: 15px; margin-bottom: 20px; }
-        hr { border: 0; border-top: 1px solid #dddfe2; margin: 15px 0; }
-        input { width: 100%; padding: 11px; margin: 5px 0; border: 1px solid #dddfe2; border-radius: 6px; box-sizing: border-box; background-color: #f5f6f7; font-size: 15px; }
-        .row { display: flex; gap: 10px; }
-        .btn { background-color: #00a400; color: white; border: none; padding: 10px 50px; font-size: 18px; font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 15px; }
-        .btn:hover { background-color: #008a00; }
+        hr { border: 0; border-top: 1px solid #dadde1; margin-bottom: 20px; }
+        
+        .input-row { display: flex; gap: 10px; margin-bottom: 10px; }
+        input[type="text"], input[type="password"], select {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccd0d5;
+            border-radius: 5px;
+            background-color: #f5f6f7;
+            font-size: 15px;
+        }
+        .label-text { font-size: 12px; color: #606770; margin-top: 10px; margin-bottom: 5px; }
+        .flex-select { display: flex; gap: 10px; }
+        
+        .gender-wrap {
+            display: flex;
+            gap: 10px;
+            border: 1px solid #ccd0d5;
+            padding: 10px;
+            border-radius: 5px;
+            flex: 1;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .signup-btn {
+            background-color: #00a400;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 50px;
+            display: block;
+            margin: 20px auto 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Create a new account</h2>
-        <p>It's quick and easy.</p>
-        <hr>
-        <form>
-            <div class="row">
-                <input type="text" placeholder="First name" required>
-                <input type="text" placeholder="Surname" required>
-            </div>
+
+<div class="container">
+    <h2>Sign Up</h2>
+    <p>It’s quick and easy.</p>
+    <hr>
+    
+    <form action="#">
+        <div class="input-row">
+            <input type="text" placeholder="First name" required>
+            <input type="text" placeholder="Surname" required>
+        </div>
+        
+        <div style="margin-bottom: 10px;">
             <input type="text" placeholder="Mobile number or email address" required>
+        </div>
+        
+        <div style="margin-bottom: 10px;">
             <input type="password" placeholder="New password" required>
-            <button type="submit" class="btn">Sign Up</button>
-        </form>
-    </div>
+        </div>
+
+        <div class="label-text">Birthday</div>
+        <div class="flex-select">
+            <select name="day">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                </select>
+            <select name="month">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                </select>
+            <select name="year">
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                </select>
+        </div>
+
+        <div class="label-text">Country</div>
+        <select name="country" required>
+            <option value="" disabled selected>Select your country</option>
+            <option value="US">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="CA">Canada</option>
+            <option value="AU">Australia</option>
+            <option value="FR">France</option>
+            <option value="DE">Germany</option>
+            <option value="IN">India</option>
+            <option value="EG">Egypt</option>
+            <option value="BR">Brazil</option>
+            <option value="JP">Japan</option>
+            </select>
+
+        <div class="label-text">Gender</div>
+        <div class="input-row">
+            <div class="gender-wrap">
+                <label>Female</label>
+                <input type="radio" name="gender" value="female">
+            </div>
+            <div class="gender-wrap">
+                <label>Male</label>
+                <input type="radio" name="gender" value="male">
+            </div>
+            <div class="gender-wrap">
+                <label>Custom</label>
+                <input type="radio" name="gender" value="custom">
+            </div>
+        </div>
+
+        <p style="font-size: 11px; margin-top: 15px;">
+            By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy.
+        </p>
+
+        <button type="submit" class="signup-btn">Sign Up</button>
+    </form>
+</div>
+
 </body>
 </html>
